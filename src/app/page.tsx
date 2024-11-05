@@ -38,7 +38,7 @@ export default function Home() {
         }`}
       >
         {!isCityPicked && (
-          <div className="transition-all duration-500">
+          <div className="transition-all duration-500 text-gray-800">
             <Text className="font-bold text-2xl xl:text-6xl text-center mb-5 xl:mb-10">
               Weather AI
             </Text>

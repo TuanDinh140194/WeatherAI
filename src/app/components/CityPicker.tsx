@@ -131,7 +131,7 @@ const CityPicker: React.FC<CityPickerProps> = ({ onCityPicked }) => {
     <div className="space-y-4">
       <div className="space-y-2">
         <div className="space-x-2">
-          <i className="ri-global-fill h-5 w-5 "></i>
+          <i className="ri-global-fill h-5 w-5"></i>
           <label htmlFor="country" className="text-black">
             Country
           </label>

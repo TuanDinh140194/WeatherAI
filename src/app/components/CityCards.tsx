@@ -445,7 +445,7 @@ const CityCards: React.FC<CityCardsProps> = ({
               style={{ width: 100, height: 100 }}
               className="flex-shrink-0"
             />
-            <div className="flex-wrap text-sm my-2">
+            <div className="flex-wrap text-sm my-2 text-gray-800">
               {loading ? ( // Check if loading
                 <div className="flex justify-center items-center">
                   <Lottie
