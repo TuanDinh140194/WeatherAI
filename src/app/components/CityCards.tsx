@@ -137,7 +137,7 @@ const CityCards: React.FC<CityCardsProps> = ({
       const first24Temperatures = apparent_temperature.slice(0, 24);
 
       //Map the data into the desired format
-      const formattedChartData = first24Time.map((t: any, index: any) => ({
+      const formattedChartData = first24Time.map((t: string, index: number) => ({
         name: new Date(t).toLocaleTimeString("en-US", {
           hour: "2-digit",
           minute: "2-digit",
@@ -169,7 +169,7 @@ const CityCards: React.FC<CityCardsProps> = ({
       };
 
       //Map data into the desired format
-      const formattedDayChartData = time.map((t: any, index: any) => ({
+      const formattedDayChartData = time.map((t: string, index: number) => ({
         name: new Date(t).toLocaleDateString("en-US", {
           weekday: "long",
         }),
@@ -220,7 +220,7 @@ const CityCards: React.FC<CityCardsProps> = ({
   }, []);
 
   // Custom Tooltip Component
-  const CustomTooltip = ({ active, payload }: TooltipProps<any,any>) => {
+  const CustomTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white/50 backdrop-blur-md text-gray-700 font-semibold p-2 rounded-2xl shadow-lg">
@@ -238,7 +238,7 @@ const CityCards: React.FC<CityCardsProps> = ({
   };
 
   //Custom Tooltip 7-Day Forecast\
-  const CustomDayTooltip = ({ active, payload }: TooltipProps<any,any>) => {
+  const CustomDayTooltip = ({ active, payload }: TooltipProps) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white/50 backdrop-blur-md text-gray-700 font-semibold p-2 rounded-2xl shadow-lg">
