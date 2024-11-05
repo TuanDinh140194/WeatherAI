@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { Country, City, State } from "country-state-city";
 import dynamic from "next/dynamic";
 import fetchWeatherData from "../APIWeather/weatherAPI";
-import { Button } from "@tremor/react";
 
 const Select = dynamic(() => import("react-select"), { ssr: false });
 
@@ -106,7 +105,7 @@ const CityPicker: React.FC<CityPickerProps> = ({ onCityPicked }) => {
     setCityOptions(cities);
   };
 
-  const handleCitySelect = async (newValue: unknown, actionMeta: unknown) => {
+  const handleCitySelect = async (newValue: unknown) => {
     const option = newValue as cityOption | null;
     setSelectedCity(option);
 
@@ -144,7 +143,7 @@ const CityPicker: React.FC<CityPickerProps> = ({ onCityPicked }) => {
           placeholder="Select a country"
           options={options}
           value={selectedCountry}
-          onChange={handleCountrySelect}
+          onChange={(newValue: unknown) => handleCountrySelect(newValue as option)}
         />
       </div>
 
@@ -162,7 +161,7 @@ const CityPicker: React.FC<CityPickerProps> = ({ onCityPicked }) => {
             placeholder="Select a state"
             options={stateOptions}
             value={selectedState}
-            onChange={handleStateSelect}
+            onChange={(newValue: unknown) => handleStateSelect(newValue as option)}
           />
         </div>
       )}

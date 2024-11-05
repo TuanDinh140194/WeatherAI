@@ -220,7 +220,7 @@ const CityCards: React.FC<CityCardsProps> = ({
   }, []);
 
   // Custom Tooltip Component
-  const CustomTooltip = ({ active, payload }: TooltipProps) => {
+  const CustomTooltip = ({ active, payload }: TooltipProps<any,any>) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white/50 backdrop-blur-md text-gray-700 font-semibold p-2 rounded-2xl shadow-lg">
@@ -238,7 +238,7 @@ const CityCards: React.FC<CityCardsProps> = ({
   };
 
   //Custom Tooltip 7-Day Forecast\
-  const CustomDayTooltip = ({ active, payload }: TooltipProps) => {
+  const CustomDayTooltip = ({ active, payload }: TooltipProps<any,any>) => {
     if (active && payload && payload.length) {
       return (
         <div className="bg-white/50 backdrop-blur-md text-gray-700 font-semibold p-2 rounded-2xl shadow-lg">
