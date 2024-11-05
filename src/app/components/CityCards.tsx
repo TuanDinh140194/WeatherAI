@@ -5,10 +5,8 @@ import {
   Bar,
   Rectangle,
   XAxis,
-  YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
   TooltipProps,
 } from "recharts";
@@ -21,7 +19,7 @@ import Thunder from "../../../public/animation/Thunder.json";
 import Snow from "../../../public/animation/SnowWeather.json";
 import Foggy from "../../../public/animation/foggy.json";
 import Robot from "../../../public/animation/robot.json";
-import AiLoading from "../../../public/animation/AiLoading.json";
+import AiLoading from "../../../public/animation/AILoading.json";
 
 //Import AI response
 import AiResponse from "../AI_API/Ai_API";
